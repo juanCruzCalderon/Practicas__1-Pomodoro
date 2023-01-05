@@ -13,6 +13,7 @@
 }
 
 body{
+	padding: 30px;
 	background-color: var(--fondo);
 	min-height: 100vh;
 	display: flex;
@@ -22,7 +23,10 @@ body{
 }
 
 .container{
-
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	align-items: center;
 }
 .container-pomodoro{
 	display: flex;
@@ -36,6 +40,9 @@ body{
 	height: 300px;
 	width: 300px;
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .pomodoro{
 	height: 100%;
@@ -44,16 +51,17 @@ body{
 	position: relative;
 	border:3px solid var(--mostaza);
 	transform: rotate(0);
+
 }
 
 .tuki{
-	height:  15px;
-	width: 15px;
+	height:  16px;
+	width: 16px;
 	border-radius: 50%;
 	background-color: var(--mostaza);
 	position: absolute;
-	left: 0;
-	top: calc(50% - 10px);
+	left: calc(50% - 8px);
+	top: 0;
 }
 
 .formulario{
@@ -80,11 +88,61 @@ body{
 	border: 1px solid var(--mostaza);
 	border-radius: 3px;
 	outline: none;
+	text-transform: uppercase;
+}
+.formulario input:hover{
+	background-color: var(--fondo);
 }
 
 .tareas{
 	width: 100%;
+	border: 2px solid var(--mostaza);
+	padding: 10px 25px;
+}
+
+.tareas__lista{
+	display: flex;
+	flex-direction: column;
+	gap:15px;
+}
+.tareas__item{
 	border: 1px solid var(--mostaza);
+	padding: 8px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	gap:5px;
+	align-items: center;
+}
+
+.tareas__tarea{
+	flex-grow: 1;
+	font-size: 1.3rem;
+}
+
+.tarea-btn{
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid var(--mostaza);
+	color: var(--mostaza-dark);
+	border-radius: 50%;
+}
+
+.play-stop:hover, .remove:hover{
+	background-color: var(--mostaza-dark);
+	color: var(--fondo);
 }
 
 
+.contador{
+	position: absolute;
+	border: 2px solid var(--mostaza);
+	font-size: 3rem;
+	padding: 10px;
+	border-radius: 10px;
+
+}

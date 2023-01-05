@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Pomodoro</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	  
 </head>
 <body>
 
@@ -12,21 +14,28 @@
 		<h1 class="titulo">Reloj Tomate</h1>
 		<section class="container-pomodoro">
 			<div class="frame">
+				<div class="contador">
+						00:00
+					</div>
 				<div class="pomodoro">
+					
 					<div class="tuki"></div>
 				</div>
 			</div>
 			<form class="formulario">
 					<span>Nombre de la tarea:</span>
-					<input type="text" name="">
-					<span>Tiempo en minutos:</span>
-					<input type="number" name="">
-					<input type="button"  value="Cancelar" >
-					<input type="button" value="Guardar">
+					<input class="nombre" required type="text" name="">
+					<span>Tiempo en segundos:</span>
+					<input class="tiempo" required type="number" name="">
+					<input type="button"  value="Cancelar"  id="btn-cancel">
+					<input type="submit" value="Guardar" id="btn-save">
 			</form>
 		</section>
 		<section class="tareas">
-			<h2 class="tareas__titulo">Tareas</h2>
+			<h2 class="tareas__titulo">Tareas:</h2>
+			<ol class="tareas__lista">
+				
+			</ol>
 		</section>
 	</div>
 
